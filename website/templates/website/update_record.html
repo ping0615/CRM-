@@ -1,0 +1,23 @@
+{% extends 'website/base.html' %}
+{% block content %}
+
+
+<div class="col-md-6 offset-md-3">
+<h1>編輯客戶資料</h1>
+<br/>
+
+<form method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+</br>
+    <button type="submit" class="btn btn-secondary">更新用戶</button>
+
+    <a href="{% url 'home' %}" class="btn btn-secondary">返回</a>
+
+</form>
+
+</div>
+
+{% endblock %}
